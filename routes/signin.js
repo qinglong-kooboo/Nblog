@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const sha1 = require('sha1')
 
 const checkNotLogin = require('../middlewares/check').checkNotLogin
-const UserModel = require('../lib/mongo').User
-const getUserInfo = require('../models/users').getUserInfo
+const UserModel = require('../models/users')
 
 // GET /signin 登录页
 router.get('/', checkNotLogin, function (req, res, next) {
@@ -27,13 +27,13 @@ router.post('/', checkNotLogin, function (req, res, next) {
     res.flash('error', e.message)
     return res.redirect('back')
   }
-  getUserInfo(name)
+  UserModel.getUserInfo(name)
     .then((user) => {
       if (!user) {
         req.flash('error', '用户不存在')
         return res.redirect('back')
       }
-      if (user.password !== password) {
+      if (sha1(password) !== user.password) {
         req.flash('error', '密码错误')
         return res.redirect('back')
       }

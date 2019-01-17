@@ -6,6 +6,7 @@ const flash = require('connect-flash')
 const config = require('config-lite')(__dirname)
 const routes = require('./routes')
 const pkg = require('./package')
+const expressFormidable = require('express-formidable')
 
 const app = express()
 
@@ -31,6 +32,12 @@ app.use(session({
 }))
 // flash 中间件，用来显示通知
 app.use(flash())
+
+// 处理表单以及文件上传的中间件
+app.use(expressFormidable({
+  uploadDir: path.join(__dirname, 'public/img'),
+  keepExtensions: true
+}))
 
 // 设置模板全局常量
 app.locals.blog = {

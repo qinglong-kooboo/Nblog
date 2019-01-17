@@ -47,8 +47,6 @@ router.post('/', checkNotLogin, function (req, res, next) {
   }
 
   password = sha1(password)
-  console.log(name)
-  console.log(req.fields)
   let user = {
     name: name,
     password: password,
@@ -56,7 +54,6 @@ router.post('/', checkNotLogin, function (req, res, next) {
     avatar: avatar,
     bio: bio
   }
-  console.log(UserModel)
   UserModel.create(user)
     .then(function (result) {
       user = result.ops[0]

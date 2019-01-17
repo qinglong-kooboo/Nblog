@@ -24,7 +24,7 @@ router.post('/', checkNotLogin, function (req, res, next) {
       throw new Error('请输入密码')
     }
   } catch (e) {
-    res.flash('error', e.message)
+    req.flash('error', e.message)
     return res.redirect('back')
   }
   UserModel.getUserInfo(name)

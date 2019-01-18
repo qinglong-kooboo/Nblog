@@ -5,11 +5,7 @@ const checkLogin = require('../middlewares/check').checkLogin
 const PostModel = require('../models/post')
 // GET /posts 所有用户或者特定用户的文章页
 //   eg: GET /posts?author=xxx
-router.get('/posts', function (req, res, next) {
-  res.render('posts')
-})
-
-router.get('/posts:author=', function (req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('posts')
 })
 
@@ -38,10 +34,9 @@ router.post('/create', checkLogin, function (req, res, next) {
   }
   PostModel.create(Post)
     .then((result) => {
-      // let post = result.ops[0]
+      let post = result.ops[0]
       req.flash('success', '发布成功')
-      // res.redirect(`/post/${post._id}`)
-      // res.redirect(`/posts`)
+      res.redirect(`/post/${post._id}`)
     })
     .catch((err) => {
       req.flash('error', err)

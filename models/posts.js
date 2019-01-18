@@ -18,7 +18,7 @@ Post.plugin('contentToHtml', {
 
 module.exports = {
   create: function (post) {
-    return Post.create(post).exec()
+    return Post.insertOne(post).exec()
   },
   getPostById: function (postId) {
     return Post
@@ -45,5 +45,14 @@ module.exports = {
     return Post
       .updateOne({ _id: postId }, { $inc: { pv: 1 } })
       .exec()
+  },
+  getRowPostById: function (postId) {
+    return Post.findOne({ _id: postId }).exec()
+  },
+  updatePostById: function (postId, post) {
+    return Post.update({ postId: postId }, { $set: post }).exec()
+  },
+  deletePostById: function (postId) {
+    return Post.deleteOne({ _id: postId }).exec()
   }
 }

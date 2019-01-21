@@ -46,9 +46,7 @@ router.post('/create', checkLogin, function (req, res, next) {
       req.flash('success', '发布成功')
       res.redirect(`/posts/${post._id}`)
     })
-    .catch((err) => {
-      req.flash('error', err)
-    })
+    .catch(next)
 })
 
 // GET /posts/create 发表文章页
@@ -74,9 +72,7 @@ router.get('/:postId', function (req, res, next) {
       comments: comments
     })
   })
-    .catch((err) => {
-      res.flash('error', err)
-    })
+    .catch(next)
 })
 
 // GET /posts/:postId/edit 更新文章页
@@ -95,9 +91,7 @@ router.get('/:postId/edit', checkLogin, function (req, res, next) {
         post: post
       })
     })
-    .catch((err) => {
-      req.flash('error', err)
-    })
+    .catch(next)
 })
 
 // POST /posts/:postId/edit 更新一篇文章
@@ -135,9 +129,7 @@ router.post('/:postId/edit', checkLogin, function (req, res, next) {
           req.flash('success', '编辑文章成功')
           res.redirect(`/post/${postId}`)
         })
-        .catch((err) => {
-          res.flash('error', err)
-        })
+        .catch(next)
     })
 })
 

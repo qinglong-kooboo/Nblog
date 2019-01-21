@@ -12,7 +12,7 @@ Comment.plugin('contentToHtml', {
 
 module.exports = {
   create: function (comment) {
-    return Comment.create(comment).exec()
+    return Comment.insertOne(comment).exec()
   },
   getCommentById: function (commentId) {
     return Comment.findOne({ _id: commentId }).exec()
@@ -26,7 +26,7 @@ module.exports = {
   getComments: function (postId) {
     return Comment
       .find({ postId: postId })
-      .populate({ path: 'author', model: 'User'})
+      .populate({ path: 'author', model: 'User' })
       .sort({ _id: 1 })
       .addCreatedAt()
       .contentToHtml()

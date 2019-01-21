@@ -96,7 +96,7 @@ router.get('/:postId/edit', checkLogin, function (req, res, next) {
       })
     })
     .catch((err) => {
-      res.flash('error', err)
+      req.flash('error', err)
     })
 })
 
@@ -147,6 +147,7 @@ router.get('/:postId/remove', checkLogin, function (req, res, next) {
   const author = req.session.user._id
   PostModel.getRowPostById(postId)
     .then((post) => {
+      console.log(post)
       if (!post) {
         throw new Error('不存在该文章!')
       }
@@ -156,12 +157,10 @@ router.get('/:postId/remove', checkLogin, function (req, res, next) {
       PostModel.deleteById(postId)
         .then(() => {
           req.flash('success', '删除成功')
-          return res.redirect('back')
+          res.redirect('posts')
         })
-        .catch((err) => {
-          req.flash('error', err)
-        })
-    })
+        .catch(next)
+    }).catch(next)
 })
 
 module.exports = router

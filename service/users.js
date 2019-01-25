@@ -4,11 +4,11 @@ const BaseService = require('./base')
 const Users = require('../models/users')
 
 class UserService extends BaseService {
-  constructor(model) {
+  constructor (model) {
     super(model)
     this.model = 'User'
   }
-  async login(data) {
+  async login (data) {
     try {
       const findRes = await Users.findOne({ name: data.name }).exec()
       if (!findRes) {
@@ -28,4 +28,4 @@ class UserService extends BaseService {
   }
 }
 
-export default UserService
+module.exports = new UserService()

@@ -1,4 +1,4 @@
-import userService from '../service/users'
+const userService = require ('../service/users')
 const jwt = require('../utils/auth')
 
 class UsersController {
@@ -9,7 +9,7 @@ class UsersController {
       result.token = token
       res.sendOk(result)
     } catch (error) {
-      res.sendError()
+      res.sendError(error)
     }
   }
   async register (res, req) {
@@ -28,4 +28,4 @@ class UsersController {
   }
 }
 
-export default UsersController
+module.exports = new UsersController()

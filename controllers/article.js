@@ -1,10 +1,17 @@
-const articleController = {}
-articleController.list = function (res, req, next) {
+// const ArticleController = {}
+// ArticleController.list = function (res, req, next) {
+// }
+// ArticleController.create = function (res, req, next) {
+// }
+// ArticleController.update = function (res, req, next) {
+// }
+// ArticleController.delete = function (res, req, next) {
+// }
+// module.exports = ArticleController
+// import articleService from '../service/users'
+// const jwt = require('../utils/auth')
+
+class ArticleController {
 }
-articleController.create = function (res, req, next) {
-}
-articleController.update = function (res, req, next) {
-}
-articleController.delete = function (res, req, next) {
-}
-module.exports = articleController
+
+export default new ArticleController()

@@ -1,16 +1,14 @@
-module.exports = {
-  checkLogin: function checkLogin (req, res, next) {
-    if (!req.session.user) {
-      req.flash('error', '未登录')
-      return res.redirect('/signin')
-    }
+const auth = require('../utils/auth')
+exports.verifyToken = function (req, res, next) {
+  const header = req.header
+  const token = header.token
+  if (!token) {
+    res.send('token丢失')
+  }
+  try {
+    auth.verifyToken(token)
     next()
-  },
-  checkNotLogin: function checkNotLogin (req, res, next) {
-    if (req.session.user) {
-      req.flash('error', '已登录')
-      return res.redirect('back') // 返回之前的页面
-    }
-    next()
+  } catch (err) {
+    res.sendErr(err)
   }
 }

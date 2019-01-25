@@ -1,12 +1,28 @@
-const User = require('../lib/mongo').User
+const Mongolass = require('mongolass')
+const mongolass = new Mongolass()
 
-module.exports = {
-  // 创建用户
-  create: function (user) {
-    return User.insertOne(user).exec()
+exports.User = mongolass.model('User', {
+  name: {
+    type: 'string',
+    required: true
   },
-  // 通过用户名查询用户是否存在
-  getUserInfo (name) {
-    return User.findOne({ name: name }).addCreatedAt().exec()
+  password: {
+    type: 'string',
+    required: true
+  },
+  avatar: {
+    type: 'string',
+    required: true
+  },
+  gender: {
+    type: 'string',
+    enum: ['m', 'f', 'x'],
+    default: 'x'
+  },
+  bio: {
+    type: 'string',
+    required: true
   }
-}
+})
+
+exports.User.createIndex({ name: 1 }, { unique: true }).exec()

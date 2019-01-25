@@ -1,5 +1,4 @@
 const marked = require('marked')
-const Comment = require('../lib/mongo').Comment
 
 Comment.plugin('contentToHtml', {
   afterFind: function (comments) {
@@ -9,6 +8,22 @@ Comment.plugin('contentToHtml', {
     })
   }
 })
+const comment =
+exports.Comment = mongolass.model('Comment', {
+  author: {
+    type: Mongolass.Types.ObjectId,
+    required: true
+  },
+  content: {
+    type: 'string',
+    required: true
+  },
+  postId: {
+    type: Mongolass.Types.ObjectId,
+    required: true
+  }
+})
+exports.Comment.createIndex({ postId: 1, _id: 1 }).exec()
 
 module.exports = {
   create: function (comment) {

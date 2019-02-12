@@ -1,7 +1,7 @@
 const Mongolass = require('mongolass')
 const mongolass = new Mongolass()
 
-exports.User = mongolass.model('User', {
+exports.users = mongolass.model('users', {
   name: {
     type: 'string',
     required: true
@@ -25,4 +25,4 @@ exports.User = mongolass.model('User', {
   }
 })
 
-exports.User.createIndex({ name: 1 }, { unique: true }).exec()
+exports.users.createIndex({ name: 1 }, { unique: true }).exec()

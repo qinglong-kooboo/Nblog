@@ -17,13 +17,12 @@ app.use(expressFormidable({
   uploadDir: path.join(__dirname, 'public/img'),
   keepExtensions: true
 }))
-
-// 使用中间件解析请求体
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
-
 // res extend
 app.use(resExtend)
+
+// 使用中间件解析请求体
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // 注册路由
 routes(app)

@@ -1,3 +1,4 @@
+'use strict'
 const cypto = require('../utils/crypto')
 const format = require('../utils/format')
 const BaseService = require('./base')
@@ -12,20 +13,31 @@ class UserService extends BaseService {
     try {
       const findRes = await Users.findOne({ name: data.name }).exec()
       if (!findRes) {
-        throw new Error('USER_NOT_EXITS')
+        const errorMsg = 'USERNAME_IS_WRONG'
+        throw errorMsg
       }
       const inputPassword = cypto.encrypt(data.inputPassword)
       const password = findRes.password
       const equal = cypto.checkPasswd(inputPassword, password)
       if (!equal) {
-        throw new Error('USER_PASSWORD_WRONG')
+        const errorMsg = 'PASSWORD_IS_WRONG'
+        throw errorMsg
       }
       const result = format.formatUser(findRes)
       return result
     } catch (error) {
-      throw new Error(error)
+      const errorMsg = 'USER_LOGIN_FAILED'
+      throw errorMsg
     }
   }
+  // async register (data) {
+  //   const findRes = await Users.findOne({ name: data.name }).exec()
+  //   if (findRes) {
+  //     throw new Error('USER_EXISTED')
+  //   }
+  //   const password = cypto.encrypt(data.inputPassword)
+  //   data.password =
+  // }
 }
 
 module.exports = new UserService()

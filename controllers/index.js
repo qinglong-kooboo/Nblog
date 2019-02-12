@@ -1,10 +1,8 @@
-import UsersController from './users'
-import ArticleController from './article'
+const UsersController = require('./users')
+// const ArticleController = require('./article')
 
 const controllers = {}
-const usersController = new UsersController()
-const articleController = new ArticleController()
-controllers.usersController = usersController
-controllers.articleController = articleController
+controllers.usersController = UsersController
+// controllers.articleController = ArticleController
 
 module.exports = controllers

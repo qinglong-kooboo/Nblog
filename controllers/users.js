@@ -1,27 +1,32 @@
-const userService = require ('../service/users')
+const service = require('../service')
 const jwt = require('../utils/auth')
 
 class UsersController {
   async login (res, req) {
     try {
-      const result = await userService.login(req.body)
+      console.log(req.body)
+      const result = await service.user.login(req.body)
       const token = jwt.createToken(result.id)
       result.token = token
       res.sendOk(result)
     } catch (error) {
-      res.sendError(error)
+      console.log(error)
     }
   }
   async register (res, req) {
     try {
-      userService.register(req.body)
+      const result = await service.user.register(req.body)
+      const token = jwt.createToken(result.id)
+      result.token = token
+      res.sendOk(result)
     } catch (error) {
-      throw new Error(error)
+      const errMessage = 'REGISTER_FAILED'
+      throw errMessage
     }
   }
   async detail (res, req) {
     try {
-      userService.detail(req.body)
+      service.user.detail(req.body)
     } catch (error) {
       throw new Error(error)
     }

@@ -9,6 +9,6 @@ exports.verifyToken = function (req, res, next) {
     auth.verifyToken(token)
     next()
   } catch (err) {
-    res.sendErr(err)
+    res.sendError(err)
   }
 }

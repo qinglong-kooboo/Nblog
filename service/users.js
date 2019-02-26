@@ -1,8 +1,9 @@
 'use strict'
-const cypto = require('../utils/crypto')
+const crypto = require('crypto')
+const { Base64 } = require('js-base64')
 const format = require('../utils/format')
 const BaseService = require('./base')
-const Users = require('../models/users')
+const mdb = require('../models')
 
 class UserService extends BaseService {
   constructor (model) {
@@ -11,15 +12,29 @@ class UserService extends BaseService {
   }
   async login (data) {
     try {
-      const findRes = await Users.findOne({ name: data.name }).exec()
+      const findRes = await mdb.users.findOne(
+        {
+          name: data.name // conditions
+        },
+        null, // 映射（只返回映射所需要的数据）
+        {
+          lean: true // 将返回的mongoose对象转换为js object
+        })
+
       if (!findRes) {
         const errorMsg = 'USERNAME_IS_WRONG'
         throw errorMsg
       }
-      const inputPassword = cypto.encrypt(data.inputPassword)
+      // md5加密
+      const md5Decode = (password) => {
+        return crypto.createHash('md5').update(password).digest('hex')
+      }
+      // 密码编码
+      const decodePassword = (pwd) => {
+        return Base64.decode(pwd)
+      }
       const password = findRes.password
-      const equal = cypto.checkPasswd(inputPassword, password)
-      if (!equal) {
+      if (md5Decode(decodePassword(data.password)) !== password) {
         const errorMsg = 'PASSWORD_IS_WRONG'
         throw errorMsg
       }

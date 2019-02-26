@@ -1,3 +1,4 @@
+'use strict'
 const mdb = require('../models')
 
 class BaseService {
@@ -6,10 +7,11 @@ class BaseService {
   }
   async findOne (params) {
     try {
-      const result = await mdb[this.model].findOne(params).exec()
+      const result = await mdb[this.model].findOne(params, null, { lead: true })
       return result
     } catch (error) {
-      throw new Error('something is wrong')
+      const errorMessage = 'NO_FIND'
+      throw errorMessage
     }
   }
 }

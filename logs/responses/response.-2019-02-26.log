@@ -1,0 +1,169 @@
+[2019-02-26T11:33:43.483] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T11:36:58.611] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T11:40:53.903] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T11:43:54.972] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T11:45:50.522] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T11:55:49.412] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T13:43:27.203] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T13:50:35.649] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T13:50:46.604] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:00:34.693] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /test
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:03:49.983] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /test
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:04:05.597] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:04:22.435] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+

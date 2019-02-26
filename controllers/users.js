@@ -1,10 +1,11 @@
+'use strict'
 const service = require('../service')
 const jwt = require('../utils/auth')
 
 class UsersController {
-  async login (res, req) {
+  async login (req, res) {
     try {
-      console.log(req.body)
+      console.log(11111)
       const result = await service.user.login(req.body)
       const token = jwt.createToken(result.id)
       result.token = token
@@ -13,7 +14,7 @@ class UsersController {
       console.log(error)
     }
   }
-  async register (res, req) {
+  async register (req, res) {
     try {
       const result = await service.user.register(req.body)
       const token = jwt.createToken(result.id)
@@ -24,7 +25,7 @@ class UsersController {
       throw errMessage
     }
   }
-  async detail (res, req) {
+  async detail (req, res) {
     try {
       service.user.detail(req.body)
     } catch (error) {

@@ -1,3 +1,4 @@
+'use strict'
 const _ = require('lodash')
 module.exports = function (res, req, next) {
   const extendArr = {

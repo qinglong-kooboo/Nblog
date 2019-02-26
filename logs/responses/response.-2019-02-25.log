@@ -1,0 +1,13 @@
+[2019-02-25T17:54:21.592] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+

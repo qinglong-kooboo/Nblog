@@ -1,28 +1,17 @@
-const Mongolass = require('mongolass')
-const mongolass = new Mongolass()
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+const Crypto = require('crypto')
 
-exports.users = mongolass.model('users', {
-  name: {
-    type: 'string',
-    required: true
-  },
+const UserSchema = new Schema({
+  name: { type: String, default: '' },
+
+  slogan: { type: String, default: '' },
+
+  gravatar: { type: String, default: '../public/img/default_logo.jpg' },
+
   password: {
-    type: 'string',
-    required: true
-  },
-  avatar: {
-    type: 'string',
-    required: true
-  },
-  gender: {
-    type: 'string',
-    enum: ['m', 'f', 'x'],
-    default: 'x'
-  },
-  bio: {
-    type: 'string',
-    required: true
+    type: String,
+    default: Crypto.createHash('md5').update('root').digest('hex')
   }
 })
-
-exports.users.createIndex({ name: 1 }, { unique: true }).exec()
+module.exports = mongoose.model('Users', UserSchema)

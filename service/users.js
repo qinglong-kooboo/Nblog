@@ -1,6 +1,5 @@
 'use strict'
-const crypto = require('crypto')
-const { Base64 } = require('js-base64')
+const { md5Decode, decodePassword } = require('../utils/crypto')
 const format = require('../utils/format')
 const BaseService = require('./base')
 const mdb = require('../models')
@@ -25,14 +24,6 @@ class UserService extends BaseService {
         const errorMsg = 'USERNAME_IS_WRONG'
         throw errorMsg
       }
-      // md5加密
-      const md5Decode = (password) => {
-        return crypto.createHash('md5').update(password).digest('hex')
-      }
-      // 密码编码
-      const decodePassword = (pwd) => {
-        return Base64.decode(pwd)
-      }
       const password = findRes.password
       if (md5Decode(decodePassword(data.password)) !== password) {
         const errorMsg = 'PASSWORD_IS_WRONG'
@@ -45,14 +36,20 @@ class UserService extends BaseService {
       throw errorMsg
     }
   }
-  // async register (data) {
-  //   const findRes = await Users.findOne({ name: data.name }).exec()
-  //   if (findRes) {
-  //     throw new Error('USER_EXISTED')
-  //   }
-  //   const password = cypto.encrypt(data.inputPassword)
-  //   data.password =
-  // }
+  async register (data) {
+    try {
+      const findRes = await mdb.users.findOne({ name: data.name }, null, { lean: true })
+      if (findRes) {
+        throw new Error('USER_EXISTED')
+      }
+      const password = md5Decode(decodePassword(data.password))
+      data.password = password
+      const result = await mdb.user.create(data)
+      return format.formatUser(result)
+    } catch (error) {
+      throw error
+    }
+  }
 }
 
 module.exports = new UserService()

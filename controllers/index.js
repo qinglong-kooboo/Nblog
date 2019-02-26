@@ -1,10 +1,10 @@
 const TestController = require('./test')
-const UsersController = require('./users')
+const UserController = require('./user')
 // const ArticleController = require('./article')
 
 const controllers = {}
-controllers.usersController = UsersController
-controllers.testController = TestController
+controllers.user = UserController
+controllers.test = TestController
 // controllers.articleController = ArticleController
 
 module.exports = controllers

@@ -8,9 +8,15 @@ module.exports = {
       return moment(date).format('YYYY-MM-DD HH:mm:ss')
     }
   },
-  formatUser: function (user) {
-    delete user.password
-    user.createdAt = this.formatTime(user.createdAt)
-    user.updatedAt = this.formatTime(user.updatedAt)
+  formatUser: function (data) {
+    delete data.password
+    data.createdAt = this.formatTime(data.createdAt)
+    data.updatedAt = this.formatTime(data.updatedAt)
+    if (data.lastLogin) {
+      data.lastLogin = this.formatDate(data.lastLogin)
+    } else {
+      data.lastLogin = '暂无登录记录'
+    }
+    return data
   }
 }

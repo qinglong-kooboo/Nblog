@@ -167,3 +167,505 @@ response body:
 undefined
 *************** response log end ***************
 
+[2019-02-26T14:57:34.533] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:57:35.605] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:57:35.607] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /favicon.ico
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:57:37.358] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:58:19.481] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:58:19.486] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:58:21.229] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:58:59.099] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:58:59.105] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /users/login
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:01.120] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:10.546] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:10.553] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /user/login
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:12.267] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:36.592] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:36.599] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /test
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:38.433] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:54.321] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:54.327] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /test
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T14:59:56.341] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:00:27.345] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /test
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:00:43.589] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:00:43.601] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /test
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:00:45.274] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:07:25.956] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:07:25.962] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /user/login
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:07:27.845] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:10:32.295] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:10:32.304] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /user/login
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:10:34.322] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:12:21.447] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:12:21.455] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /user/login
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:12:23.469] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /sw.js
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:13:14.953] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:13:46.891] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:14:06.384] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:14:34.454] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:18:55.176] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T15:20:22.411] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/login
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T16:00:10.903] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T16:01:24.193] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2019-02-26T16:01:36.196] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: POST
+request originalUrl:  /user/register
+request client ip:  null
+request body: 
+undefined
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+

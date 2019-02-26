@@ -2,16 +2,15 @@
 const service = require('../service')
 const jwt = require('../utils/auth')
 
-class UsersController {
+class UserController {
   async login (req, res) {
     try {
-      console.log(11111)
       const result = await service.user.login(req.body)
       const token = jwt.createToken(result.id)
       result.token = token
       res.sendOk(result)
     } catch (error) {
-      console.log(error)
+      res.send(error.errMessage)
     }
   }
   async register (req, res) {
@@ -22,7 +21,7 @@ class UsersController {
       res.sendOk(result)
     } catch (error) {
       const errMessage = 'REGISTER_FAILED'
-      throw errMessage
+      res.send(errMessage)
     }
   }
   async detail (req, res) {
@@ -34,4 +33,4 @@ class UsersController {
   }
 }
 
-module.exports = new UsersController()
+module.exports = new UserController()

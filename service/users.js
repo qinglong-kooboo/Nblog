@@ -50,6 +50,19 @@ class UserService extends BaseService {
       throw error
     }
   }
+  async getUserByName (name) {
+    try {
+      const result = await mdb.users.findOne({ name: name }, null, { lean: true })
+      if (!result) {
+        const errorMsg = 'USER_NOT_EXISTED'
+        throw errorMsg
+      }
+      return format.formatUser(result)
+    } catch (error) {
+      const errorMsg = 'USER_GET_FAILED'
+      throw errorMsg
+    }
+  }
 }
 
 module.exports = new UserService()

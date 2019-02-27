@@ -28,12 +28,12 @@ app.use(expressFormidable({
   keepExtensions: true
 }))
 
+// res extend
+app.use(resExtend)
+
 // 使用中间件解析请求体
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-
-// res extend
-app.use(resExtend)
 
 // 注册路由
 routes(app)

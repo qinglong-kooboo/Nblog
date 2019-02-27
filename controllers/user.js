@@ -10,7 +10,7 @@ class UserController {
       result.token = token
       res.sendOk(result)
     } catch (error) {
-      res.send(error.errMessage)
+      res.sendErr(error.errMessage)
     }
   }
   async register (req, res) {
@@ -21,14 +21,15 @@ class UserController {
       res.sendOk(result)
     } catch (error) {
       const errMessage = 'REGISTER_FAILED'
-      res.send(errMessage)
+      res.sendErr(errMessage)
     }
   }
-  async detail (req, res) {
+  async getUserByName (req, res) {
     try {
-      service.user.detail(req.body)
+      const result = await service.user.getUserByName(req.query.name)
+      res.sendOk(result)
     } catch (error) {
-      throw new Error(error)
+      res.sendErr(error)
     }
   }
 }

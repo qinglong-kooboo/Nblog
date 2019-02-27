@@ -14,4 +14,4 @@ const UserSchema = new Schema({
     default: Crypto.createHash('md5').update('root').digest('hex')
   }
 })
-module.exports = mongoose.model('Users', UserSchema)
+module.exports = mongoose.model('users', UserSchema)

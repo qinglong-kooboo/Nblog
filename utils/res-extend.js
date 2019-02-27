@@ -1,6 +1,6 @@
 'use strict'
 const _ = require('lodash')
-module.exports = function (res, req, next) {
+module.exports = (req, res, next) => {
   const extendArr = {
     sendOk: (data) => {
       const rst = {
@@ -10,7 +10,7 @@ module.exports = function (res, req, next) {
       }
       return res.send(_.extend(rst))
     },
-    sendError: (errorInfo) => {
+    sendErr: (errorInfo) => {
       return res.send(_.extend(errorInfo))
     }
   }

@@ -12,6 +12,7 @@ module.exports = function (app) {
   // app.use('/user', require('./users'))
   app.post('/user/login', controllers.user.login)
   app.post('/user/register', controllers.user.register)
+  app.get('/user', controllers.user.getUserByName)
   // app.use('/posts', require('./article'))
   // app.use('/comments', require('./comments'))
 }

@@ -2,35 +2,33 @@
 const service = require('../service')
 const jwt = require('../utils/auth')
 
-class UserController {
-  async login (req, res) {
-    try {
-      const result = await service.user.login(req.body)
-      const token = jwt.createToken(result.id)
-      result.token = token
-      res.sendOk(result)
-    } catch (error) {
-      res.send(error.errMessage)
-    }
-  }
-  async register (req, res) {
-    try {
-      const result = await service.user.register(req.body)
-      const token = jwt.createToken(result.id)
-      result.token = token
-      res.sendOk(result)
-    } catch (error) {
-      const errMessage = 'REGISTER_FAILED'
-      res.send(errMessage)
-    }
-  }
-  async detail (req, res) {
-    try {
-      service.user.detail(req.body)
-    } catch (error) {
-      throw new Error(error)
-    }
-  }
+exports.login = (req, res) => {
+  console.log(11111)
+  service.user.login(req.body)
+    .then((response) => {
+      const token = jwt.createToken(response.id)
+      response.token = token
+      res.send(response)
+    }).catch((error) => {
+      res.send(error)
+    })
 }
-
-module.exports = new UserController()
+exports.register = (req, res) => {
+  service.user.register(req.body)
+    .then((response) => {
+      let result = response
+      const token = jwt.createToken(result.id)
+      result.token = token
+      res.sendOk(result)
+    }).catch((error) => {
+      res.send(error)
+    })
+}
+exports.getUserByName = (req, res) => {
+  console.log(req.query.name)
+  service.user.getUserByName(req.query.name).then((response) => {
+    res.send(response)
+  }).catch((error) => {
+    res.send(error)
+  })
+}

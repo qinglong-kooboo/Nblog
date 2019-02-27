@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 const Crypto = require('crypto')
 
 const UserSchema = new Schema({
-  name: { type: String, default: '' },
+  name: { type: String, required: 'name is required' },
 
   slogan: { type: String, default: '' },
 
@@ -14,4 +14,4 @@ const UserSchema = new Schema({
     default: Crypto.createHash('md5').update('root').digest('hex')
   }
 })
-module.exports = mongoose.model('Users', UserSchema)
+module.exports = mongoose.model('users', UserSchema)

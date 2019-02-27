@@ -1,7 +1,7 @@
 const moment = require('moment')
 
 module.exports = {
-  formatdate: function (date) {
+  formatDate: function (date) {
     if (!date) {
       return ''
     } else {
@@ -10,8 +10,8 @@ module.exports = {
   },
   formatUser: function (data) {
     delete data.password
-    data.createdAt = this.formatTime(data.createdAt)
-    data.updatedAt = this.formatTime(data.updatedAt)
+    data.createdAt = this.formatDate(data.createdAt)
+    data.updatedAt = this.formatDate(data.updatedAt)
     if (data.lastLogin) {
       data.lastLogin = this.formatDate(data.lastLogin)
     } else {

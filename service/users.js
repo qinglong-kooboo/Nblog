@@ -49,8 +49,7 @@ exports.register = (data) => {
 exports.getUserByName = (name) => {
   return new Promise((resolve, reject) => {
     mdb.user.findOne({ name: name }, null, { lean: true }).then((response) => {
-      let result = response
-      resolve(result)
+      resolve(format.formatUser(response))
     }).catch((error) => {
       reject(error)
     })

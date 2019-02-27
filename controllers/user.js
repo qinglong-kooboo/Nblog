@@ -8,9 +8,9 @@ exports.login = (req, res) => {
     .then((response) => {
       const token = jwt.createToken(response.id)
       response.token = token
-      res.send(response)
+      res.sendOk(response)
     }).catch((error) => {
-      res.send(error)
+      res.sendErr(error)
     })
 }
 exports.register = (req, res) => {
@@ -21,14 +21,13 @@ exports.register = (req, res) => {
       result.token = token
       res.sendOk(result)
     }).catch((error) => {
-      res.send(error)
+      res.sendErr(error)
     })
 }
 exports.getUserByName = (req, res) => {
-  console.log(req.query.name)
   service.user.getUserByName(req.query.name).then((response) => {
-    res.send(response)
+    res.sendOk(response)
   }).catch((error) => {
-    res.send(error)
+    res.sendErr(error)
   })
 }

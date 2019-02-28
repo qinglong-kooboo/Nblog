@@ -21,30 +21,42 @@ class UserService extends BaseService {
         })
 
       if (!findRes) {
-        const errorMsg = 'USERNAME_IS_WRONG'
+        const errorMsg = {
+          status: 200,
+          errCode: 20002,
+          errMessage: 'USERNAME_NOT_EXISTED'
+        }
         throw errorMsg
       }
       const password = findRes.password
       if (md5Decode(decodePassword(data.password)) !== password) {
-        const errorMsg = 'PASSWORD_IS_WRONG'
+        const errorMsg = {
+          status: 200,
+          errCode: 20003,
+          errMessage: 'PASSWORD_IS_WRONG'
+        }
         throw errorMsg
       }
       const result = format.formatUser(findRes)
       return result
     } catch (error) {
-      const errorMsg = 'USER_LOGIN_FAILED'
-      throw errorMsg
+      throw error
     }
   }
   async register (data) {
     try {
+      console.log(data.name)
       const findRes = await mdb.users.findOne({ name: data.name }, null, { lean: true })
       if (findRes) {
-        throw new Error('USER_EXISTED')
+        const errorMsg = {
+          status: 200,
+          errCode: 20004,
+          errMessage: 'USER_EXISTED'
+        }
+        throw errorMsg
       }
-      const password = md5Decode(decodePassword(data.password))
-      data.password = password
-      const result = await mdb.user.create(data)
+      data.password = md5Decode(decodePassword(data.password))
+      const result = await mdb.users.create(data)
       return format.formatUser(result)
     } catch (error) {
       throw error

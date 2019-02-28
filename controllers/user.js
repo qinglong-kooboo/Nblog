@@ -1,27 +1,22 @@
 'use strict'
 const service = require('../service')
-const jwt = require('../utils/auth')
-
+const { createToken } = require('../utils/auth')
 class UserController {
   async login (req, res) {
     try {
       const result = await service.user.login(req.body)
-      const token = jwt.createToken(result.id)
-      result.token = token
+      result.token = createToken(result._id)
       res.sendOk(result)
     } catch (error) {
-      res.sendErr(error.errMessage)
+      res.sendErr(error)
     }
   }
   async register (req, res) {
     try {
       const result = await service.user.register(req.body)
-      const token = jwt.createToken(result.id)
-      result.token = token
       res.sendOk(result)
     } catch (error) {
-      const errMessage = 'REGISTER_FAILED'
-      res.sendErr(errMessage)
+      res.sendErr(error)
     }
   }
   async getUserByName (req, res) {

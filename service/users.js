@@ -6,7 +6,7 @@ const mdb = require('../models')
 
 exports.login = (data) => {
   return new Promise((resolve, reject) => {
-    mdb.users.findOne(
+    mdb.user.findOne(
       {
         name: data.name // conditions
       },
@@ -29,7 +29,7 @@ exports.login = (data) => {
 }
 exports.register = (data) => {
   return new Promise((resolve, reject) => {
-    mdb.users.findOne({ name: data.name }, null, { lean: true }).then((response) => {
+    mdb.user.findOne({ name: data.name }, null, { lean: true }).then((response) => {
       if (response) {
         reject(response)
       }

@@ -5,7 +5,6 @@ const config = require('config-lite')(__dirname)
 const routes = require('./core/routes')
 const bodyParser = require('body-parser')
 const pkg = require('./package')
-const expressFormidable = require('express-formidable')
 const resExtend = require('./utils/res-extend')
 const mongodb = require('./core/mongodb')
 const redis = require('./core/redis')
@@ -21,12 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 // 连接数据库
 redis.connect()
 mongodb.connect()
-
-// 处理表单以及文件上传的中间件
-app.use(expressFormidable({
-  uploadDir: path.join(__dirname, 'public/img'),
-  keepExtensions: true
-}))
 
 // 使用中间件解析请求体
 app.use(bodyParser.json())

@@ -3,13 +3,13 @@ const service = require('../service')
 const jwt = require('../utils/auth')
 
 exports.login = (req, res) => {
-  console.log(11111)
   service.user.login(req.body)
     .then((response) => {
       const token = jwt.createToken(response.id)
       response.token = token
       res.sendOk(response)
     }).catch((error) => {
+      console.log(error)
       res.sendErr(error)
     })
 }

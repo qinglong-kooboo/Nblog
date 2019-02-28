@@ -11,7 +11,10 @@ module.exports = function (req, res, next) {
       return res.send(_.extend(rst))
     },
     sendErr: (errorInfo) => {
-      return res.send(_.extend(errorInfo))
+      const rsa = {
+        errMessage: errorInfo
+      }
+      return res.send(_.extend(rsa))
     }
   }
   _.extend(res, extendArr)

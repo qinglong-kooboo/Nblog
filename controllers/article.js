@@ -1,17 +1,13 @@
-// const ArticleController = {}
-// ArticleController.list = function (res, req, next) {
-// }
-// ArticleController.create = function (res, req, next) {
-// }
-// ArticleController.update = function (res, req, next) {
-// }
-// ArticleController.delete = function (res, req, next) {
-// }
-// module.exports = ArticleController
-// import articleService from '../service/users'
-// const jwt = require('../utils/auth')
-
+const service = require('../service')
 class ArticleController {
+  async getAllArticles (req, res) {
+    try {
+      const result = await service.articles.list()
+      res.sendOk(result)
+    } catch (error) {
+      res.sendErr(error)
+    }
+  }
 }
 
 module.exports = new ArticleController()

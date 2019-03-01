@@ -45,7 +45,6 @@ class UserService extends BaseService {
   }
   async register (data) {
     try {
-      console.log(data.name)
       const findRes = await mdb.users.findOne({ name: data.name }, null, { lean: true })
       if (findRes) {
         const errorMsg = {

@@ -1,3 +1,8 @@
-const user = require('./users')
+const users = require('./users')
+const articles = require('./articles')
 
-exports.user = user
+const service = {}
+service.users = users
+service.articles = articles
+
+module.exports = service

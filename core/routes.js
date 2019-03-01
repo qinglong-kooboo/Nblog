@@ -13,6 +13,6 @@ module.exports = function (app) {
   app.post('/user/login', controllers.user.login)
   app.post('/user/register', controllers.user.register)
   app.get('/user', controllers.user.getUserByName)
-  // app.use('/posts', require('./article'))
+  app.get('/article/list', controllers.article.getAllArticles)
   // app.use('/comments', require('./comments'))
 }

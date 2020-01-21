@@ -1,0 +1,36 @@
+[2020-01-21T11:12:30.265] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /__webpack_hmr/client
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2020-01-21T11:12:32.475] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /article/list
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
+[2020-01-21T11:13:01.236] [INFO] responseLog - null
+*************** response log start ***************
+nullrequest method: GET
+request originalUrl:  /__webpack_hmr/client
+request client ip:  null
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+undefined
+*************** response log end ***************
+
